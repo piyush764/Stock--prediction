@@ -12,11 +12,16 @@ print(data.head())
 # %%
 data['Prev_Close'] = data['Close'].shift(1)
 #%%
+data['MA5'] = data['Close'].rolling(window=5).mean()
+data['MA10'] = data['Close'].rolling(window=10).mean()
+data['Pct_Change'] = data['Close'].pct_change()
+
+#%%
 data = data.dropna()
 #%%
 Y = data['Close']
 #%%
-X = data[['Prev_Close']]
+X = data[['Prev_Close','MA5','MA10','Pct_Change']]
 #%%
 print(X.head())
 #%%
