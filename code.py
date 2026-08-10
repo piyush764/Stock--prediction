@@ -41,5 +41,12 @@ predictions = model.predict(X_test)
 #%%
 print(predictions[:5])
 # %%
-print(Y_test[:5]) #give actual price on those same day
+print(Y_test[:5]) #give actual price on those same day 
 # %%
+from sklearn.metrics import mean_squared_error, r2_score
+mse = mean_squared_error(Y_test, predictions)
+r2 = r2_score(Y_test, predictions)
+#%%
+print("MSE:", mse) #MSE is √14.19 ≈ ₹3.76 on avg
+#%%
+print("R2:", r2) #R2 is around94%
