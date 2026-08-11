@@ -72,3 +72,27 @@ print("RF MSE:", rf_mse)
 #%%
 print("RF R2:", rf_r2)
 # %%
+import matplotlib.pyplot as plt
+
+'''plt.title(" Actual vs Predicted price")
+plt.xlabel("Days")
+plt.ylabel("Price")
+plt.figure(figsize=(10,5))
+plt.plot(X,Y ,linestyle="--")
+plt.plot(Y_test.values, label='Actual Price')
+plt.plot(predictions, label='Predicted Price')
+
+plt.show()'''
+# %%
+plt.close('all')
+plt.figure(figsize=(10,5))
+plt.plot(Y_test.values, label='Actual Price')
+plt.plot(predictions, label='Predicted Price')
+plt.legend()
+plt.xlabel('Days')
+plt.ylabel('Price')
+plt.title('Actual vs Predicted Adani Power Price')
+plt.savefig('actual_vs_predicted.png')
+plt.show()
+
+# %%
