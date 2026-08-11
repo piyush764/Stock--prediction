@@ -55,3 +55,20 @@ r2 = r2_score(Y_test, predictions)
 print("MSE:", mse) #MSE is √14.19 ≈ ₹3.76 on avg
 #%%
 print("R2:", r2) #R2 is around94%
+
+'''<------Random-Forest------>'''
+#%%
+from sklearn.ensemble import RandomForestRegressor
+#%%
+rf_model = RandomForestRegressor()
+rf_model.fit(X_train,Y_train)
+#%%
+rf_predictions = rf_model.predict(X_test)
+#%%
+rf_mse = mean_squared_error(Y_test,rf_predictions)
+rf_r2 = r2_score(Y_test,rf_predictions)
+#%%
+print("RF MSE:", rf_mse)
+#%%
+print("RF R2:", rf_r2)
+# %%
