@@ -96,3 +96,6 @@ plt.savefig('actual_vs_predicted.png')
 plt.show()
 
 # %%
+import pickle 
+pickle.dump(model,open('stock_model.pkl','wb'))
+# %%
