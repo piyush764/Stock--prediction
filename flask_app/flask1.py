@@ -17,10 +17,10 @@ def predict():
         float(request.form['Pct_Change'])
     ]
     prediction = model.predict([features])
-    print(prediction)
+    '''print(prediction)
     print(type(prediction))
-    print(prediction.shape)
-    return {"predicted_price": float(prediction[0])}
+    print(prediction.shape)'''
+    return {"predicted_price": float(prediction[0][0])}
 
 if __name__ == "__main__":
     app.run(debug=True)
