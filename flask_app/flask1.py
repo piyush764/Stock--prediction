@@ -1,7 +1,9 @@
 from flask import Flask ,request,render_template
+from flask_cors import CORS
 import pickle
 
 app = Flask(__name__)
+CORS(app)
 model = pickle.load(open('stock_model.pkl','rb'))
 
 @app.route('/')
