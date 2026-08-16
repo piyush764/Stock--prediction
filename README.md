@@ -1,6 +1,6 @@
 # Adani Power Stock Price Prediction
 
-A full-stack machine learning project that predicts Adani Power's next-day closing price using historical stock data, with a Flask API backend and React frontend.
+A full-stack machine learning project that predicts Adani Power's next-day closing price using historical stock data, with a Flask API backend and React frontend. we can change the stock also if we want to see some other stock price and all!.
 
 ## Problem Statement
 Predict the next day's closing price of Adani Power stock using recent price trends and momentum indicators.
